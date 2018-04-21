@@ -19,9 +19,8 @@ export class ShareService {
 
   forSlug(slug: string): Observable<Share> {
     const url = this.pathService.shareBySlug(slug);
-    console.log(url);
 
-    const y = this.http
+    return this.http
       .get<ShareAndPhotoResponse>(url)
       .map(resp => {
         const share = new Share();
@@ -35,8 +34,6 @@ export class ShareService {
         });
         return share;
       });
-
-    return y;
   }
 }
 

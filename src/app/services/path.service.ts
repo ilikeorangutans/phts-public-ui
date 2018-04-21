@@ -10,10 +10,10 @@ export class PathService {
   ) { }
 
   apiHost(): string {
-    let base = this.document.baseURI;
     if (isDevMode()) {
-      base = 'http://localhost:8080';
+      return 'http://localhost:8080';
     }
+    let base = this.document.baseURI;
 
     if (base.endsWith('/')) {
       base = base.substring(0, base.length - 1);

@@ -29,7 +29,6 @@ export class ShareViewerComponent implements OnInit {
   share: Observable<Share>;
 
   ngOnInit() {
-    console.log('ShareViewer::ngOnInit()');
     this.title.setTitle('share');
     this.share = this.route.params
       .map(params => params['slug'] as string)
