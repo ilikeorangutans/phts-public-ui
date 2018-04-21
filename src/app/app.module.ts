@@ -9,12 +9,14 @@ import { ShareService } from './services/share.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
 import { ShareViewerComponent } from './share-viewer/share-viewer.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    ShareViewerComponent
+    ShareViewerComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
